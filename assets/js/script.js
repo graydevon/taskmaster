@@ -1,5 +1,7 @@
 var tasks = {};
 
+
+
 var createTask = function(taskText, taskDate, taskList) {
   // create elements that make up a task item
   var taskLi = $("<li>").addClass("list-group-item");
@@ -177,5 +179,9 @@ $("#remove-tasks").on("click", function() {
 
 // load tasks for the first time
 loadTasks();
+
+$(".card .list-group").sortable({
+  connectWith: $(".card .list-group")
+});
 
 
